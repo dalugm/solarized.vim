@@ -2,9 +2,10 @@
 Title: Solarized Colorscheme for Vim
 Description: Precision colors for machines and people
 Author: Ethan Schoonover
+Maintainer: dalu
 Colors: light yellow
 Created:  2011 Mar 15
-Modified: 2011 Apr 16
+Modified: 2021 Feb 18
 
 ---
 
@@ -12,6 +13,9 @@ Solarized Colorscheme for Vim
 =============================
 
 Developed by Ethan Schoonover <es@ethanschoonover.com>
+
+Patched by dalu <moutong945@outlook.com>
+
 
 Visit the [Solarized homepage]
 ------------------------------
@@ -37,10 +41,10 @@ and is for installation convenience only (with [Pathogen] or [Vundle], for
 instance).  Issues, bug reports, changelogs are centralized at the main 
 [Solarized repository].
 
-[Solarized homepage]:   http://ethanschoonover.com/solarized
+[Solarized homepage]:   https://ethanschoonover.com/solarized
 [Solarized repository]: https://github.com/altercation/solarized
 [Vim-only repository]:  https://github.com/altercation/vim-colors-solarized
-[vimorg-script]:        http://vim.org/script
+[vimorg-script]:        https://vim.org/script
 [Pathogen]:             https://github.com/tpope/vim-pathogen
 [Vundle]:               https://github.com/gmarik/vundle
 
@@ -132,39 +136,41 @@ Solarized will work out of the box with just the two lines specified above but
 does include several other options that can be set in your .vimrc file.
 
 Set these in your vimrc file prior to calling the colorscheme.
-"
-    option name               default     optional
-    ------------------------------------------------
-    g:solarized_termcolors=   16      |   256
-    g:solarized_termtrans =   0       |   1
-    g:solarized_degrade   =   0       |   1
-    g:solarized_bold      =   1       |   0
-    g:solarized_underline =   1       |   0
-    g:solarized_italic    =   1       |   0
-    g:solarized_contrast  =   "normal"|   "high" or "low"
-    g:solarized_visibility=   "normal"|   "high" or "low"
-    ------------------------------------------------
+
+    option name                default       optional
+    --------------------------------------------------------
+    g:solarized_termcolors  |  16        |   256
+    g:solarized_termtrans   |  0         |   1
+    g:solarized_degrade     |  0         |   1
+    g:solarized_bold        |  1         |   0
+    g:solarized_underline   |  1         |   0
+    g:solarized_italic      |  1         |   0
+    g:solarized_contrast    |  "normal"  |   "high" or "low"
+    g:solarized_visibility  |  "normal"  |   "high" or "low"
+    --------------------------------------------------------
 
 ### Option Details
 
 *   g:solarized_termcolors
 
-    This is set to *16* by default, meaning that Solarized will attempt to use 
-    the standard 16 colors of your terminal emulator. You will need to set 
-    those colors to the correct Solarized values either manually or by 
-    importing one of the many colorscheme available for popular terminal 
-    emulators and Xdefaults.
+    This is set to *16* by default, meaning that Solarized will attempt
+    to use the standard 16 colors of your terminal emulator. You will
+    need to set those colors to the correct Solarized values either
+    manually or by importing one of the many colorscheme available for
+    popular terminal emulators and Xdefaults.
 
 *   g:solarized_termtrans
 
-    If you use a terminal emulator with a transparent background and Solarized 
-    isn't displaying the background color transparently, set this to 1 and 
-    Solarized will use the default (transparent) background of the terminal 
-    emulator. *urxvt* required this in my testing; iTerm2 did not.
+    If you use a terminal emulator with a transparent background and
+    Solarized isn't displaying the background color transparently, set
+    this to 1 and Solarized will use the default (transparent)
+    background of the terminal emulator. *urxvt* required this in my
+    testing; iTerm2 did not.
 
-    Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by 
-    default as this is almost always the best option. The only exception to 
-    this is if the working terminfo file supports 256 colors (xterm-256color).
+    Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1
+    by default as this is almost always the best option. The only
+    exception to this is if the working terminfo file supports 256
+    colors (xterm-256color).
 
 *   g:solarized_degrade
 
@@ -189,35 +195,18 @@ Set these in your vimrc file prior to calling the colorscheme.
     displayed using `:set list` can be set to one of three levels depending on 
     your needs. Default value is `normal` with `high` and `low` options.
 
-Toggle Background Function
---------------------------
-
-Solarized comes with a Toggle Background plugin that by default will map to 
-<F5> if that mapping is available. If it is not available you will need to 
-either map the function manually or change your current <F5> mapping to 
-something else.
-
-To set your own mapping in your .vimrc file, simply add the following line to 
-support normal, insert and visual mode usage, changing the "<F5>" value to the 
-key or key combination you wish to use:
-
-    call togglebg#map("<F5>")
-
-Note that you'll want to use a single function key or equivalent if you want 
-the plugin to work in all modes (normal, insert, visual).
-
 Code Notes
 ----------
 
-Use folding to view the `solarized.vim` script with `foldmethod=marker` turned 
-on.
+Use folding to view the `solarized.vim` script with `foldmethod=marker`
+turned on.
 
-I have attempted to modularize the creation of Vim colorschemes in this script 
-and, while it could be refactored further, it should be a good foundation for 
-the creation of any color scheme. By simply changing the sixteen values in the 
-GUI section and testing in gvim (or mvim) you can rapidly prototype new 
-colorschemes without diving into the weeds of line-item editing each syntax 
-highlight declaration.
+I have attempted to modularize the creation of Vim colorschemes in this
+script and, while it could be refactored further, it should be a good
+foundation for the creation of any color scheme. By simply changing the
+sixteen values in the GUI section and testing in gvim (or mvim) you can
+rapidly prototype new colorschemes without diving into the weeds of
+line-item editing each syntax highlight declaration.
 
 The Values
 ----------
