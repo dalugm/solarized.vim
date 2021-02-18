@@ -16,6 +16,21 @@ Developed by Ethan Schoonover <es@ethanschoonover.com>
 
 Patched by dalu <moutong945@outlook.com>
 
+*Table of Contents*
+
+- [Visit the Solarized homepage](#visit-the-solarized-homepage)
+- [Screenshots](#screenshots)
+- [Downloads](#downloads)
+- [Installation](#installation)
+    - [Option 1: Manual installation](#option-1-manual-installation)
+    - [Option 2: Pathogen installation ***(recommended)***](#option-2-pathogen-installation-recommended)
+    - [Modify .vimrc](#modify-vimrc)
+    - [IMPORTANT NOTE FOR TERMINAL USERS:](#important-note-for-terminal-users)
+- [Advanced Configuration](#advanced-configuration)
+    - [Option Details](#option-details)
+- [Code Notes](#code-notes)
+- [The Values](#the-values)
+- [License](#license)
 
 Visit the [Solarized homepage]
 ------------------------------
