@@ -681,9 +681,9 @@ hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 "exe "hi! gitcommitBlank"
 " }}}
 " git-gutter highlighting {{{
-exe "hi! gitgutterAdd"          .s:fmt_none   .s:fg_green  .s:bg_base02
-exe "hi! gitgutterChange"       .s:fmt_none   .s:fg_yellow .s:bg_base02
-exe "hi! gitgutterDelete"       .s:fmt_none   .s:fg_red    .s:bg_base02
+exe "hi! gitgutterAdd"          .s:fmt_none   .s:fg_green  .s:bg_base03
+exe "hi! gitgutterChange"       .s:fmt_none   .s:fg_yellow .s:bg_base03
+exe "hi! gitgutterDelete"       .s:fmt_none   .s:fg_red    .s:bg_base03
 exe "hi! GitGutterChangeDelete" .s:fmt_none   .s:fg_red    .s:bg_none
 " }}}
 " html highlighting {{{
