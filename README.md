@@ -59,7 +59,7 @@ instance).  Issues, bug reports, changelogs are centralized at the main
 [Solarized homepage]:   https://ethanschoonover.com/solarized
 [Solarized repository]: https://github.com/altercation/solarized
 [Vim-only repository]:  https://github.com/altercation/vim-colors-solarized
-[vimorg-script]:        https://vim.org/script
+[vim.org script]:       https://www.vim.org/scripts/script.php?script_id=3520
 [Pathogen]:             https://github.com/tpope/vim-pathogen
 [Vundle]:               https://github.com/gmarik/vundle
 
