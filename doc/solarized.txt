@@ -75,7 +75,7 @@ Set these in your vimrc file prior to calling the colorscheme.
 
 option name               default     optional
 ------------------------------------------------
-g:solarized_termcolors=   16      |   256
+g:solarized_termcolors=   256     |   16
 g:solarized_termtrans =   0       |   1
 g:solarized_degrade   =   0       |   1
 g:solarized_bold      =   1       |   0

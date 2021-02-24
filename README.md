@@ -5,7 +5,7 @@ Author: Ethan Schoonover
 Maintainer: dalu
 Colors: light yellow
 Created:  2011 Mar 15
-Modified: 2021 Feb 18
+Modified: 2021 Feb 24
 
 ---
 
@@ -121,7 +121,7 @@ assignment out entirely and get the same results.
 See the [Solarized homepage] for screenshots which will help you 
 select either the light or dark background.
 
-### IMPORTANT NOTE FOR TERMINAL USERS:
+### IMPORTANT NOTE FOR NONE 24-BIT TERMINAL USERS:
 
 If you are going to use Solarized in Terminal mode (i.e. not in a GUI version 
 like gvim or macvim), **please please please** consider setting your terminal 
@@ -130,7 +130,7 @@ for some popular terminal emulator as well as Xdefaults in the official
 Solarized download available from [Solarized homepage]. If you use 
 Solarized *without* these colors, Solarized will need to be told to degrade its
 colorscheme to a set compatible with the limited 256 terminal palette (whereas 
-by using the terminal's 16 ansi color values, you can set the correct, specific 
+by using the terminal's 256 ansi color values, you can set the correct, specific 
 values for the Solarized palette).
 
 If you do use the custom terminal colors, solarized.vim should work out of the
@@ -154,7 +154,7 @@ Set these in your vimrc file prior to calling the colorscheme.
 
     option name                default       optional
     --------------------------------------------------------
-    g:solarized_termcolors  |  16        |   256
+    g:solarized_termcolors  |  256       |   16
     g:solarized_termtrans   |  0         |   1
     g:solarized_degrade     |  0         |   1
     g:solarized_bold        |  1         |   0
@@ -168,8 +168,8 @@ Set these in your vimrc file prior to calling the colorscheme.
 
 *   g:solarized_termcolors
 
-    This is set to *16* by default, meaning that Solarized will attempt
-    to use the standard 16 colors of your terminal emulator. You will
+    This is set to *256* by default, meaning that Solarized will attempt
+    to use the standard 256 colors of your terminal emulator. You will
     need to set those colors to the correct Solarized values either
     manually or by importing one of the many colorscheme available for
     popular terminal emulators and Xdefaults.
