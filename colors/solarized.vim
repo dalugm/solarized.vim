@@ -164,7 +164,7 @@ let colors_name = "solarized"
 " ---------------------------------------------------------------------
 "
 " Set color values for true color at the same time
-if (has("gui_running") || &termguicolors != 0 && g:solarized_degrade == 0)
+if ((has("gui_running") || (has("termguicolors") && &termguicolors)) && g:solarized_degrade == 0)
   let s:vmode   = "gui"
   let s:base03  = "#002b36"
   let s:base02  = "#073642"
@@ -183,7 +183,7 @@ if (has("gui_running") || &termguicolors != 0 && g:solarized_degrade == 0)
   let s:cyan    = "#2aa198"
   let s:green   = "#719e07" " experimental
   " let s:green   = "#859900" " original
-elseif (has("gui_running") || &termguicolors != 0 && g:solarized_degrade == 1)
+elseif ((has("gui_running") || (has("termguicolors") && &termguicolors)) && g:solarized_degrade == 1)
   " These colors are identical to the 256 color mode. They may be viewed
   " while in gui mode via "let g:solarized_degrade=1", though this is not
   " recommened and is for testing only.
@@ -292,7 +292,7 @@ let s:ob     = ""
 " }}}
 " Background value based on termtrans setting {{{
 " ---------------------------------------------------------------------
-if ((has("gui_running") || (&termguicolors != 0)) || g:solarized_termtrans == 0)
+if ((has("gui_running") || (has("termguicolors") && &termguicolors)) || g:solarized_termtrans == 0)
   let s:back = s:base03
 else
   let s:back = "NONE"
@@ -414,7 +414,7 @@ exe "let s:fmt_revb     = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'"
 exe "let s:fmt_revbb    = ' ".s:vmode."=NONE".s:r.s:bb.   " term=NONE".s:r.s:bb."'"
 exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:bb.s:u." term=NONE".s:r.s:bb.s:u."'"
 
-if (has("gui_running") || (&termguicolors != 0))
+if (has("gui_running") || (has("termguicolors") && &termguicolors))
   exe "let s:sp_none      = ' guisp=".s:none   ."'"
   exe "let s:sp_back      = ' guisp=".s:back   ."'"
   exe "let s:sp_base03    = ' guisp=".s:base03 ."'"
@@ -543,7 +543,7 @@ exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
-if ((has("gui_running") || (&termguicolors != 0)) || &t_Co > 8)
+if ((has("gui_running") || (has("termguicolors") && &termguicolors)) || &t_Co > 8)
   exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_base00
 else
   exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base00 .s:bg_base02
@@ -565,7 +565,7 @@ elseif (g:solarized_diffmode == "low")
   exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_none
   exe "hi! DiffText"       .s:fmt_undr   .s:fg_blue   .s:bg_none   .s:sp_blue
 else " normal
-  if (has("gui_running") || (&termguicolors != 0))
+  if (has("gui_running") || (has("termguicolors") && &termguicolors))
     exe "hi! DiffAdd"        .s:fmt_bold   .s:fg_green  .s:bg_base02 .s:sp_green
     exe "hi! DiffChange"     .s:fmt_bold   .s:fg_yellow .s:bg_base02 .s:sp_yellow
     exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_base02
